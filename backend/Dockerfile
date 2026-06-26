@@ -1,7 +1,8 @@
 FROM maven:3.9-eclipse-temurin-17 AS builder
 WORKDIR /workspace
-COPY pom.xml ./
-COPY src ./src
+COPY backend/pom.xml ./
+COPY backend/src ./src
+COPY frontend ../frontend
 RUN mvn -DskipTests package -DskipTests
 
 FROM eclipse-temurin:17-jre
