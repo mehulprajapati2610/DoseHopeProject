@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — DoseHope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+          <path d="M16 3 C16 3 7 9 7 17 C7 23.5 11 28 16 28 C21 28 25 23.5 25 17 C25 9 16 3 16 3 Z" fill="#1B7A5C"/>
+          <rect x="13.2" y="12.5" width="5.6" height="11" rx="1.4" fill="#F4FBF7"/>
+          <rect x="10.5" y="15.2" width="11" height="5.6" rx="1.4" fill="#F4FBF7"/>
+        </svg>
+      </span>
+      <span class="brand-name">DoseHope</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="browse.html">Browse</a>
+      <a href="donate.html">Donate</a>
+    </nav>
+   <div class="nav-actions">
+  <span class="btn btn-ghost" id="userPill"></span>
+  <button class="btn btn-primary" id="logoutBtn">Log out</button>
+</div>
+  </div>
+</header>
+
+<section class="app-section">
+  <div class="app-header">
+    <span class="eyebrow eyebrow-dark" id="greetingEyebrow">Welcome back</span>
+    <h1 id="greetingName">Your Dashboard</h1>
+    <p class="section-sub">Here's what's happening with your donations.</p>
+  </div>
+
+  <div class="stats-row" id="statsRow"></div>
+
+  <div class="dashboard-grid">
+    <div class="card-panel">
+      <div class="panel-title">
+        <h3>Your Listings</h3>
+        <a href="donate.html">+ Add new</a>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Medicine</th><th>Category</th><th>Qty</th><th>Status</th><th>Expiry</th></tr>
+          </thead>
+          <tbody id="listingsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card-panel">
+      <div class="panel-title">
+        <h3>Expiring Soon</h3>
+      </div>
+      <div class="expiry-list" id="expiringList"></div>
+    </div>
+  </div>
+
+  <div class="card-panel" style="margin-top:22px;">
+    <div class="panel-title">
+      <h3>Donation Requests</h3>
+      <a href="browse.html">Browse more medicines →</a>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Medicine</th><th>NGO</th><th>Status</th><th>Requested on</th></tr>
+        </thead>
+        <tbody id="requestsTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="data-store.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

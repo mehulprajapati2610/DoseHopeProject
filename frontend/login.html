@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In or Register — DoseHope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+          <path d="M16 3 C16 3 7 9 7 17 C7 23.5 11 28 16 28 C21 28 25 23.5 25 17 C25 9 16 3 16 3 Z" fill="#1B7A5C"/>
+          <rect x="13.2" y="12.5" width="5.6" height="11" rx="1.4" fill="#F4FBF7"/>
+          <rect x="10.5" y="15.2" width="11" height="5.6" rx="1.4" fill="#F4FBF7"/>
+        </svg>
+      </span>
+      <span class="brand-name">DoseHope</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="auth-wrap">
+
+    <div class="auth-side">
+      <span class="eyebrow">Welcome back</span>
+      <h1>Every Account Has<br>a Reason to Be Here</h1>
+      <p>Whether you're donating leftover medicine, requesting supplies for an NGO, or volunteering for pickups — it starts with one account.</p>
+      <ul class="auth-points">
+        <li><strong>Donors</strong> list unused, unexpired medicine in minutes.</li>
+        <li><strong>NGOs &amp; Hospitals</strong> browse and request what they need.</li>
+        <li><strong>Volunteers</strong> see assigned pickups and deliveries.</li>
+      </ul>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log In</button>
+        <button class="auth-tab" data-tab="register">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="auth-form active">
+        <div id="loginError" class="form-error" hidden></div>
+
+        <div class="form-field">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+        <div class="demo-hint">
+          <p><strong>Demo accounts</strong> (password for all: <code>demo123</code>)</p>
+          <button type="button" class="demo-chip" data-email="mehul@example.com">Donor — mehul@example.com</button>
+          <button type="button" class="demo-chip" data-email="asha@ngo.org">NGO — asha@ngo.org</button>
+          <button type="button" class="demo-chip" data-email="rahul@volunteer.com">Volunteer — rahul@volunteer.com</button>
+        </div>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="auth-form">
+        <div id="registerError" class="form-error" hidden></div>
+
+        <div class="form-field">
+          <label for="regName">Full name</label>
+          <input type="text" id="regName" required placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" required placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" required placeholder="At least 6 characters" minlength="6">
+        </div>
+        <div class="form-field">
+          <label for="regRole">I am registering as</label>
+          <select id="regRole" required>
+            <option value="DONOR">Donor</option>
+            <option value="NGO">NGO / Hospital</option>
+            <option value="VOLUNTEER">Volunteer</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="regPhone">Phone number</label>
+          <input type="tel" id="regPhone" placeholder="+91 90000 00000">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="data-store.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

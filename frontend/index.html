@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoseHope — Give Medicine a Second Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+          <path d="M16 3 C16 3 7 9 7 17 C7 23.5 11 28 16 28 C21 28 25 23.5 25 17 C25 9 16 3 16 3 Z" fill="#1B7A5C"/>
+          <rect x="13.2" y="12.5" width="5.6" height="11" rx="1.4" fill="#F4FBF7"/>
+          <rect x="10.5" y="15.2" width="11" height="5.6" rx="1.4" fill="#F4FBF7"/>
+        </svg>
+      </span>
+      <span class="brand-name">DoseHope</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#how-it-works">How it works</a>
+      <a href="#categories">Categories</a>
+      <a href="#impact">Impact</a>
+      <a href="#ngos">For NGOs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav-actions" id="navActions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="donate.html" class="btn btn-primary">Donate Now</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Verified NGOs &nbsp;•&nbsp; Safe Handoffs &nbsp;•&nbsp; Zero Waste</span>
+      <h1>Give Medicine<br>a Second Life</h1>
+      <p class="hero-sub">
+        Every year, unused medicines expire in home cabinets while people nearby
+        can't afford the same drugs. DoseHope connects your leftover, unexpired
+        medicines to verified NGOs, hospitals, and volunteers who get them
+        to someone who needs them — safely and quickly.
+      </p>
+      <div class="hero-cta-row">
+        <a href="donate.html" class="btn btn-primary btn-lg">Donate a Medicine</a>
+        <a href="browse.html" class="btn btn-outline btn-lg">Find Medicines Near You</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>12,400+</strong>
+          <span>Medicines donated</span>
+        </div>
+        <div class="stat">
+          <strong>340</strong>
+          <span>Verified NGO partners</span>
+        </div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>Delivered before expiry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="flow-card">
+        <p class="flow-card-label">How a donation moves</p>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-icon" data-icon="donor">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="14" width="24" height="18" rx="3" fill="#E8F4EE" stroke="#1B7A5C" stroke-width="1.6"/><path d="M8 19 L20 27 L32 19" stroke="#1B7A5C" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="10" r="4" fill="#1B7A5C"/></svg>
+            </span>
+            <p class="flow-name">Donor</p>
+            <p class="flow-desc">Lists unexpired medicine</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 12h16M14 6l6 6-6 6" stroke="#9BC4B4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-step">
+            <span class="flow-icon" data-icon="match">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" fill="#E8F4EE" stroke="#1B7A5C" stroke-width="1.6"/><path d="M14 20l4 4 8-8" stroke="#1B7A5C" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <p class="flow-name">NGO Match</p>
+            <p class="flow-desc">Verified org accepts request</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 12h16M14 6l6 6-6 6" stroke="#9BC4B4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-step">
+            <span class="flow-icon" data-icon="volunteer">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" fill="#E8F4EE" stroke="#1B7A5C" stroke-width="1.6"/><path d="M13 22l4-9 3 6 3-6 4 9" stroke="#1B7A5C" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <p class="flow-name">Volunteer</p>
+            <p class="flow-desc">Picks up &amp; delivers</p>
+          </div>
+        </div>
+        <div class="flow-card-footer">
+          <span class="pulse-dot"></span>
+          Average pickup time: <strong>under 24 hrs</strong>
+        </div>
+      </div>
+
+      <div class="floating-chip chip-1">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z" fill="#E8B339"/></svg>
+        Expiry-checked
+      </div>
+      <div class="floating-chip chip-2">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" fill="#1B7A5C"/></svg>
+        NGO Verified
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEARCH WIDGET (floating, overlaps hero/section boundary) ===== -->
+<section class="search-widget-wrap">
+  <div class="search-widget">
+    <p class="search-widget-title">Looking for a specific medicine?</p>
+    <form class="search-form">
+      <div class="search-field">
+        <label for="category">Category</label>
+        <select id="category">
+          <option>All Categories</option>
+          <option>Chronic Illness</option>
+          <option>Pediatric</option>
+          <option>First Aid</option>
+          <option>Diabetes Care</option>
+          <option>Cardiac Care</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="location">Location</label>
+        <select id="location">
+          <option>Near Me</option>
+          <option>Ahmedabad</option>
+          <option>Surat</option>
+          <option>Vadodara</option>
+          <option>Rajkot</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="availability">Availability</label>
+        <select id="availability">
+          <option>Available Now</option>
+          <option>Any Status</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary search-btn">Search Medicines</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== MEDICINE CATEGORIES ===== -->
+<section class="categories" id="categories">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-dark">Browse by need</span>
+    <h2>Medicine Categories</h2>
+    <p class="section-sub">Find what's commonly donated and requested across our network.</p>
+  </div>
+
+  <div class="category-grid">
+    <div class="category-card">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="10" y="6" width="20" height="28" rx="3" fill="#FDF3E0" stroke="#E8B339" stroke-width="1.6"/><path d="M15 14h10M15 19h10M15 24h6" stroke="#C9931E" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <h3>Chronic Illness</h3>
+      <p>BP, thyroid, cholesterol &amp; long-term medication</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="6" fill="#E8F4EE" stroke="#1B7A5C" stroke-width="1.6"/><path d="M10 34c0-6 4.5-10 10-10s10 4 10 10" fill="#E8F4EE" stroke="#1B7A5C" stroke-width="1.6"/></svg>
+      </span>
+      <h3>Pediatric</h3>
+      <p>Syrups, dosage-specific medicine for children</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 7l11 4v9c0 8-5 13-11 15-6-2-11-7-11-15v-9l11-4z" fill="#FBEAEA" stroke="#C0504D" stroke-width="1.6"/><path d="M14 20h5l2-4 2 8 2-4h5" stroke="#C0504D" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h3>First Aid</h3>
+      <p>Bandages, antiseptics, basic emergency supplies</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" fill="#E9F0FB" stroke="#3B6FB6" stroke-width="1.6"/><path d="M20 12v8l5 5" stroke="#3B6FB6" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </span>
+      <h3>Diabetes Care</h3>
+      <p>Insulin, glucometers, strips &amp; related supplies</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 32s-11-7-11-15a7 7 0 0114-1 7 7 0 0114 1c0 8-11 15-11 15z" fill="#FBEAEA" stroke="#C0504D" stroke-width="1.6"/></svg>
+      </span>
+      <h3>Cardiac Care</h3>
+      <p>Heart medication needing consistent supply</p>
+    </div>
+    <div class="category-card category-card-more">
+      <span class="cat-icon">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="12" cy="20" r="2.4" fill="#1B7A5C"/><circle cx="20" cy="20" r="2.4" fill="#1B7A5C"/><circle cx="28" cy="20" r="2.4" fill="#1B7A5C"/></svg>
+      </span>
+      <h3>View All Categories</h3>
+      <p>See the full list of supported medicine types</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-dark">The process</span>
+    <h2>How DoseHope Works</h2>
+    <p class="section-sub">From your shelf to someone who needs it — in four tracked steps.</p>
+  </div>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <span class="step-num">01</span>
+      <h3>List your medicine</h3>
+      <p>Add the name, batch number, manufacturing and expiry date, and a photo. We auto-check expiry so nothing unsafe gets listed.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-num">02</span>
+      <h3>Get matched</h3>
+      <p>A verified NGO or hospital near you requests it. You review and accept — you stay in control of who receives your donation.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-num">03</span>
+      <h3>Volunteer pickup</h3>
+      <p>A vetted volunteer collects the medicine from your doorstep and tracks the handoff at every stage.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-num">04</span>
+      <h3>Delivered &amp; confirmed</h3>
+      <p>The NGO confirms receipt. You get a notification and it's added to your donation history.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPACT / FEATURED ===== -->
+<section class="impact" id="impact">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-dark">Why it matters</span>
+    <h2>Every Donation Has Two Sides</h2>
+    <p class="section-sub">Less waste for one household. More access for another.</p>
+  </div>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-img" style="background:linear-gradient(135deg,#1B7A5C,#0F4C3A);">
+        <svg viewBox="0 0 64 64" width="56" height="56" fill="none"><path d="M32 56c14-8 22-18 22-30a14 14 0 00-22-11 14 14 0 00-22 11c0 12 8 22 22 30z" fill="#fff" opacity="0.9"/></svg>
+      </div>
+      <h3>Reduce Medicine Waste</h3>
+      <p>Unused, unexpired medicine sitting in a cabinet helps no one. DoseHope gives it a second life instead of letting it expire.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-img" style="background:linear-gradient(135deg,#E8B339,#C9931E);">
+        <svg viewBox="0 0 64 64" width="56" height="56" fill="none"><path d="M32 8l6 16 17 1-13 11 5 17-15-9-15 9 5-17-13-11 17-1z" fill="#fff" opacity="0.9"/></svg>
+      </div>
+      <h3>Reach Those Who Need It</h3>
+      <p>Many people skip medication because they can't afford it. Verified NGOs make sure donations reach genuine need.</p>
+    </div>
+    <div class="impact-card">
+      <div class="impact-img" style="background:linear-gradient(135deg,#3B6FB6,#274B7D);">
+        <svg viewBox="0 0 64 64" width="56" height="56" fill="none"><rect x="14" y="14" width="36" height="36" rx="6" fill="#fff" opacity="0.9"/><path d="M24 32l6 6 12-12" stroke="#274B7D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Full Transparency</h3>
+      <p>Every donation is tracked — donor, NGO, volunteer, and delivery status — so you always know where it ended up.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NGO / VOLUNTEER CTA ===== -->
+<section class="ngo-cta" id="ngos">
+  <div class="ngo-cta-inner">
+    <div class="ngo-cta-text">
+      <span class="eyebrow">For Organizations</span>
+      <h2>Run an NGO, Hospital, or Want to Volunteer?</h2>
+      <p>Join our verified network to request medicines for the people you serve, or sign up to help with pickups and deliveries in your area.</p>
+      <div class="ngo-cta-actions">
+        <a href="login.html" class="btn btn-primary">Register as NGO / Hospital</a>
+        <a href="login.html" class="btn btn-outline-light">Become a Volunteer</a>
+      </div>
+    </div>
+    <div class="ngo-cta-stats">
+      <div class="ngo-stat"><strong>340+</strong><span>Verified Organizations</span></div>
+      <div class="ngo-stat"><strong>1,200+</strong><span>Active Volunteers</span></div>
+      <div class="ngo-stat"><strong>21</strong><span>Cities Covered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-dark">Questions</span>
+    <h2>Frequently Asked</h2>
+  </div>
+
+  <div class="faq-list">
+    <details class="faq-item" open>
+      <summary>Is it safe to donate unused medicine?</summary>
+      <p>Yes — DoseHope only accepts medicines that are unexpired, in original sealed packaging, and verified against batch and expiry details before they're listed.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Who picks up my donation?</summary>
+      <p>A verified volunteer assigned through the platform handles pickup, so you don't have to coordinate delivery yourself.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do I know my donation reached someone?</summary>
+      <p>You'll get a notification at every step — accepted, picked up, and delivered — and it stays in your donation history for reference.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can hospitals and NGOs request specific medicines?</summary>
+      <p>Yes, verified NGOs and hospitals can browse available listings and send requests for medicines matching their current need.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+          <path d="M16 3 C16 3 7 9 7 17 C7 23.5 11 28 16 28 C21 28 25 23.5 25 17 C25 9 16 3 16 3 Z" fill="#1B7A5C"/>
+          <rect x="13.2" y="12.5" width="5.6" height="11" rx="1.4" fill="#F4FBF7"/>
+          <rect x="10.5" y="15.2" width="11" height="5.6" rx="1.4" fill="#F4FBF7"/>
+        </svg>
+      </span>
+      <span class="brand-name">DoseHope</span>
+      <p>Connecting unused medicine to people who need it — safely, transparently, and on time.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#how-it-works">How it works</a>
+        <a href="#categories">Categories</a>
+        <a href="#impact">Impact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <a href="#ngos">Register NGO</a>
+        <a href="#ngos">Volunteer</a>
+        <a href="donate.html">Donate</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DoseHope. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

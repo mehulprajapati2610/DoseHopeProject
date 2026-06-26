@@ -1,0 +1,22 @@
+# Environment variables (contains secrets)
+.env
+*.env
+
+# Backend build output
+backend/target/
+
+# IDE
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Maven wrapper (optional - keep if you want reproducible builds without local Maven install)
+# .mvn/
+# mvnw
+# mvnw.cmd

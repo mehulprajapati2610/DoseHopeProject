@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate a Medicine — DoseHope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+          <path d="M16 3 C16 3 7 9 7 17 C7 23.5 11 28 16 28 C21 28 25 23.5 25 17 C25 9 16 3 16 3 Z" fill="#1B7A5C"/>
+          <rect x="13.2" y="12.5" width="5.6" height="11" rx="1.4" fill="#F4FBF7"/>
+          <rect x="10.5" y="15.2" width="11" height="5.6" rx="1.4" fill="#F4FBF7"/>
+        </svg>
+      </span>
+      <span class="brand-name">DoseHope</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="browse.html">Browse</a>
+      <a href="donate.html">Donate</a>
+    </nav>
+    <div class="nav-actions">
+  <span class="btn btn-ghost" id="userPill"></span>
+  <button class="btn btn-primary" id="logoutBtn">Log out</button>
+</div>
+  </div>
+</header>
+
+<section class="app-section">
+  <div class="app-header">
+    <span class="eyebrow eyebrow-dark">List a medicine</span>
+    <h1>Donate a Medicine</h1>
+    <p class="section-sub">Tell us what you have. We'll check the expiry date automatically before it goes live.</p>
+  </div>
+
+  <div class="donate-layout">
+    <form id="donateForm" class="card-panel donate-form">
+      <div id="formError" class="form-error" hidden></div>
+      <div id="formSuccess" class="form-success" hidden></div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="medName">Medicine name *</label>
+          <input type="text" id="medName" required placeholder="e.g. Paracetamol 500mg">
+        </div>
+        <div class="form-field">
+          <label for="medManufacturer">Manufacturer *</label>
+          <input type="text" id="medManufacturer" required placeholder="e.g. Cipla">
+        </div>
+        <div class="form-field">
+          <label for="medBatch">Batch number *</label>
+          <input type="text" id="medBatch" required placeholder="e.g. PCM2245">
+        </div>
+        <div class="form-field">
+          <label for="medCategory">Category *</label>
+          <select id="medCategory" required>
+            <option value="">Select category</option>
+            <option>Chronic Illness</option>
+            <option>Pediatric</option>
+            <option>First Aid</option>
+            <option>Diabetes Care</option>
+            <option>Cardiac Care</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="medMfgDate">Manufacturing date *</label>
+          <input type="date" id="medMfgDate" required>
+        </div>
+        <div class="form-field">
+          <label for="medExpDate">Expiry date *</label>
+          <input type="date" id="medExpDate" required>
+        </div>
+        <div class="form-field">
+          <label for="medQuantity">Quantity *</label>
+          <input type="number" id="medQuantity" min="1" required placeholder="e.g. 10">
+        </div>
+        <div class="form-field">
+          <label for="medImage">Medicine image</label>
+          <input type="file" id="medImage" accept="image/*">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="medDescription">Description</label>
+        <textarea id="medDescription" rows="3" placeholder="Any extra detail — condition, reason for donating, etc."></textarea>
+      </div>
+
+      <div class="expiry-preview" id="expiryPreview" hidden></div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg">List This Medicine</button>
+        <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+
+    <aside class="card-panel donate-tips">
+      <h3>Before you list</h3>
+      <ul class="tips-list">
+        <li>Medicine must be unexpired and unopened or sealed.</li>
+        <li>Double check the batch number matches the package.</li>
+        <li>Expired medicine is auto-rejected — it will not be listed.</li>
+        <li>You'll be notified the moment an NGO requests it.</li>
+      </ul>
+      <div class="tips-divider"></div>
+      <h3>Your recent listings</h3>
+      <div id="recentListings" class="recent-listings"></div>
+    </aside>
+  </div>
+</section>
+
+<script src="data-store.js"></script>
+<script src="donate.js"></script>
+</body>
+</html>
